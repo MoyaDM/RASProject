@@ -18,8 +18,8 @@ GPIO.setup(spdA,GPIO.OUT)
 GPIO.setup(dirB1,GPIO.OUT)
 GPIO.setup(dirB2,GPIO.OUT)
 GPIO.setup(spdB,GPIO.OUT)
-pwmA=GPIO.PWM(spdA,100)
-pwmB=GPIO.PWM(spdB,100)
+pwmA=GPIO.PWM(spdA,1000)
+pwmB=GPIO.PWM(spdB,1000)
 pwmA.start(0)
 pwmB.start(0)
 
@@ -51,14 +51,14 @@ def Backward():
     
 def RightFor():
     pwmA.ChangeDutyCycle(50)
-    pwmB.ChangeDutyCycle(80)
+    pwmB.ChangeDutyCycle(95)
     GPIO.output(dirA1,True)
     GPIO.output(dirA2,False)
     GPIO.output(dirB1,True)
     GPIO.output(dirB2,False)
 
 def LeftFor():
-    pwmA.ChangeDutyCycle(80)
+    pwmA.ChangeDutyCycle(95)
     pwmB.ChangeDutyCycle(50)
     GPIO.output(dirA1,True)
     GPIO.output(dirA2,False)
@@ -67,14 +67,14 @@ def LeftFor():
 
 def RightBack():
     pwmA.ChangeDutyCycle(50)
-    pwmB.ChangeDutyCycle(80)
+    pwmB.ChangeDutyCycle(95)
     GPIO.output(dirA1,False)
     GPIO.output(dirA2,True)
     GPIO.output(dirB1,False)
     GPIO.output(dirB2,True)
 
 def LeftBack():
-    pwmA.ChangeDutyCycle(80)
+    pwmA.ChangeDutyCycle(95)
     pwmB.ChangeDutyCycle(50)
     GPIO.output(dirA1,False)
     GPIO.output(dirA2,True)
