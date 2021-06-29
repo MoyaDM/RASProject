@@ -29,7 +29,23 @@ while(1):
     if (cv2.waitKey(33) == ord('d')):
         print ("Rightkey")
         x = 1
+        
+    if (cv2.waitKey(33) == ord('r')):
+        print ("Stop")
+        x = 1
 
-    if cv2.waitKey(33) == 32:
+    if (cv2.waitKey(33) == ord('1')):
+        print ("Low Speed")
+        x = 1
+    
+    if (cv2.waitKey(33) == ord('2')):
+        print ("Medium Speed")
+        x = 1
+
+    if (cv2.waitKey(33) == ord('3')):
+        print ("High Speed")
+        x = 1
+
+    if (cv2.waitKey(33) == 32) or (cv2.waitKey(33) == ord('q')):
         break
 
